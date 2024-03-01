@@ -1,0 +1,22 @@
+{
+  "name": "sos2324-16-sandbox",
+  "version": "1.0.0",
+  "description": "mi primera chamba",
+  "main": "prueba.js",
+  "scripts": {
+    "start": "node prueba.js",
+    "test": "npx newman run ./tests/testingAPIcontacts.json -e ./tests/environment/local.json"
+  },
+  "keywords": [
+    "favorD0"
+  ],
+  "author": "domi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cool-ascii-faces": "^1.3.4",
+    "express": "^4.18.2",
+    "nedb": "^1.8.0",
+    "newman": "^6.1.1"
+  }
+}

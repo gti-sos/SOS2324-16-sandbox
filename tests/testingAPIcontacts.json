@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "b9decc4d-8038-4b7a-9499-753e0c938907",
+		"name": "contacts API testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32965495",
+		"_collection_link": "https://web.postman.co/workspace/My-Workspace~d5f904fa-c8bd-42b9-8e91-0050848f92a5/collection/32965495-b9decc4d-8038-4b7a-9499-753e0c938907?action=share&source=collection_link&creator=32965495"
+	},
+	"item": [
+		{
+			"name": "GET v1/contacts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/api/v1/contacts",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST pablo v1/contacts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Pol\",\r\n        \"phone\": 333333333\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVER}}/api/v1/contacts",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
